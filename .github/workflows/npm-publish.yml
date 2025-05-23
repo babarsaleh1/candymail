@@ -31,7 +31,7 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
+  - uses: actions/setup-node@v1
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
